@@ -1,0 +1,154 @@
+:root {
+  --bg: #0c0c0c;
+  --primary: #ff7a00;
+  --text: #eee;
+  --light-text: #aaa;
+  --card: #1b1b1b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  line-height: 1.6;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+header {
+  padding: 20px 0;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav a {
+  color: var(--text);
+  text-decoration: none;
+}
+.btn, .btn-outline {
+  padding: 10px 20px;
+  border: 2px solid var(--primary);
+  text-decoration: none;
+  color: var(--text);
+  border-radius: 5px;
+}
+.btn {
+  background: var(--primary);
+}
+.btn-outline:hover, .btn:hover {
+  background: var(--text);
+  color: var(--bg);
+}
+#hero {
+  display: flex;
+  align-items: center;
+  padding: 50px 0;
+}
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.hero-text h2 {
+  color: var(--primary);
+}
+.socials a {
+  margin-right: 10px;
+  color: var(--text);
+}
+.socials img {
+  width: 3opx;
+  height: 30px;
+  object-fit: contain;
+  vertical-align: middle;
+  margin-right: 5px;
+  margin-bottom: 2px;
+}
+.services-grid, .portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+}
+.service-box, .portfolio-item {
+  background: var(--card);
+  padding: 20px;
+  text-align: center;
+}
+.about {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  padding: 50px 0;
+}
+.skills div {
+  margin-top: 10px;
+}
+.portfolio-filters {
+  margin: 20px 0;
+}
+.portfolio-filters button {
+  background: none;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  padding: 8px 15px;
+  margin: 5px;
+  cursor: pointer;
+}
+form {
+  display: grid;
+  gap: 15px;
+  margin-top: 20px;
+}
+form input, form textarea {
+  padding: 10px;
+  border: none;
+  background: var(--card);
+  color: var(--text);
+}
+form button {
+  background: none;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 10px;
+  cursor: pointer;
+}
+footer {
+  text-align: center;
+  padding: 40px 0;
+  background: #111;
+}
+footer nav {
+  margin: 20px 0;
+}
+footer nav a {
+  margin: 0 10px;
+  color: var(--light-text);
+}
+.footer-info {
+  color: var(--light-text);
+  font-size: 0.9em;
+}
+.hero-buttons a {
+  margin-right: 10px;
+  display: inline-block;
+}
+@media (max-width: 768px) {
+  .hero-content, .about {
+    flex-direction: column;
+    text-align: center;
+  }
+}
